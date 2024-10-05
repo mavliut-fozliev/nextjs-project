@@ -1,0 +1,32 @@
+@import "../_colors";
+
+.box {
+  background-color: $primary-color;
+  width: 610px;
+  height: 255px;
+  border: 1px solid $borders-color;
+  border-radius: 10px;
+
+  &Input {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &Buttons {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.label {
+  color: $text-primary-color;
+}
+
+.separator {
+  width: 100%;
+  height: 3px;
+  background-color: $borders-color;
+}
