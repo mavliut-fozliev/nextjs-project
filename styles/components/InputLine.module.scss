@@ -1,0 +1,32 @@
+@import "../_colors";
+
+.label {
+  color: $text-secondary-color;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $secondary-color;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: $secondary-color;
+  margin-top: 8px;
+  color: $text-primary-color;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #5c5c5c;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &.error {
+    border-color: red;
+  }
+}
