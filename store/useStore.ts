@@ -2,15 +2,15 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 interface StoreState {
-  test: string;
-  setTest: (test: string) => void;
+  name: string;
+  setName: (test: string) => void;
 }
 
-export const usePageStore = create<StoreState>()(
+export const useStore = create<StoreState>()(
   persist(
     (set) => ({
-      test: "",
-      setTest: (test) => set({ test }),
+      name: "",
+      setName: (name) => set({ name }),
     }),
     {
       name: "storage",
