@@ -1,0 +1,24 @@
+@import "../_colors";
+
+.button {
+  background-color: #fff;
+  color: $primary-color;
+  border: none;
+  border-radius: 6px;
+  height: 48px;
+  padding: 0 54px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &.disabled {
+    background-color: #e0e0e0;
+    color: #b0b0b0;
+    cursor: not-allowed;
+  }
+}
