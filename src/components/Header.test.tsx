@@ -4,6 +4,15 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 
+vi.mock("next/router", () => ({
+  useRouter: () => ({
+    route: "/",
+    pathname: "/",
+    query: {},
+    asPath: "/",
+  }),
+}));
+
 const mockStore = {
   name: "",
 };

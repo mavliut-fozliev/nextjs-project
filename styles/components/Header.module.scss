@@ -36,6 +36,10 @@
   }
 }
 
+.active {
+  color: $text-primary-color;
+}
+
 .name {
   display: flex;
   align-items: center;

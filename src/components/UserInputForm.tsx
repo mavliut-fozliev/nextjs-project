@@ -5,6 +5,7 @@ import { InputLine } from "./InputLine";
 import { Button } from "./Button";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
+import { Routes } from "../../consts";
 
 export const UserInputForm: NextComponentType = () => {
   const router = useRouter();
@@ -22,12 +23,12 @@ export const UserInputForm: NextComponentType = () => {
 
   const onClickOpenCalculator = () => {
     saveName();
-    router.push("./calculator");
+    router.push(Routes.calculator);
   };
 
   const onClickOpenGenerator = () => {
     saveName();
-    router.push("./password-generator");
+    router.push(Routes.passwordGenerator);
   };
 
   return (

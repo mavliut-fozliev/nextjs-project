@@ -2,6 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { UserInputForm } from "./UserInputForm";
+import { Routes } from "../../consts";
 
 const mockStore = {
   setName: vi.fn(),
@@ -37,7 +38,7 @@ describe("UserInputForm Component", () => {
     fireEvent.click(button);
 
     expect(mockStore.setName).toHaveBeenCalledWith("Test User");
-    expect(mockPush).toHaveBeenCalledWith("./calculator");
+    expect(mockPush).toHaveBeenCalledWith(Routes.calculator);
   });
 
   it("should call store.setName and navigate to password generator on button click", () => {
@@ -49,6 +50,6 @@ describe("UserInputForm Component", () => {
     fireEvent.click(button);
 
     expect(mockStore.setName).toHaveBeenCalledWith("Test User");
-    expect(mockPush).toHaveBeenCalledWith("./password-generator");
+    expect(mockPush).toHaveBeenCalledWith(Routes.passwordGenerator);
   });
 });

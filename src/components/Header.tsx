@@ -5,9 +5,16 @@ import Logo from "../../assets/logo.svg";
 import profile from "../../assets/profile.png";
 import Link from "next/link";
 import { useStore } from "../../store/useStore";
+import { Routes } from "../../consts";
+import { useRouter } from "next/router";
 
 export const Header: NextComponentType = () => {
   const store = useStore();
+  const router = useRouter();
+
+  const currentPath = router.pathname;
+
+  const isActive = (path: string) => (currentPath === path ? styles.active : "");
 
   return (
     <nav className={styles.box}>
@@ -16,13 +23,13 @@ export const Header: NextComponentType = () => {
         <p className={styles.logoText}>Quantum lab</p>
       </div>
       <nav className={styles.menu}>
-        <Link href="./" className={styles.menuHome}>
+        <Link href={Routes.home} className={isActive(Routes.home)}>
           Главная
         </Link>
-        <Link href="./calculator" className={styles.menuCalculator} hidden={!store.name}>
+        <Link href={Routes.calculator} className={isActive(Routes.calculator)} hidden={!store.name}>
           Калькулятор
         </Link>
-        <Link href="./password-generator" className={styles.menuGenerator} hidden={!store.name}>
+        <Link href={Routes.passwordGenerator} className={isActive(Routes.passwordGenerator)} hidden={!store.name}>
           Генератор паролей
         </Link>
       </nav>
