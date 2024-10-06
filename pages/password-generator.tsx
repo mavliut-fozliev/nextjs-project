@@ -16,10 +16,8 @@ type Config = {
 
 type ConfigValues = Record<keyof Config, string>;
 
-const PasswordPenerator: NextPage = () => {
+const PasswordGenerator: NextPage = () => {
   const [passwordLength, setPasswordLength] = useState<number>(0);
-
-  console.log(passwordLength);
 
   const [config, setConfig] = useState<Config>({
     useUpperCase: false,
@@ -132,4 +130,4 @@ const PasswordPenerator: NextPage = () => {
   );
 };
 
-export default PasswordPenerator;
+export default PasswordGenerator;
