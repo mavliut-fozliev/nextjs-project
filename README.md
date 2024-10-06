@@ -18,4 +18,6 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## To run tests use
 
+```bash
 yarn test
+```
