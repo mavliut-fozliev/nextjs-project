@@ -1,0 +1,39 @@
+@import "../_colors";
+
+.checkbox {
+  display: none;
+}
+
+.checkboxLabel {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
+  color: $text-primary-color;
+  font-size: 0.8rem;
+}
+
+.checkboxLabel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid $borders-color;
+  background: $secondary-color;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .checkboxLabel::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
