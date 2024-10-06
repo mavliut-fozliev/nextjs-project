@@ -1,0 +1,98 @@
+@import "./colors";
+
+.box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+.info {
+  width: 548px;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: $text-primary-color;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $text-primary-color;
+  }
+}
+
+.content {
+  width: 428px;
+  height: 640px;
+  border: 1px solid $borders-color;
+  border-radius: 8px;
+}
+
+.display {
+  padding: 18px;
+}
+
+.output {
+  color: $text-secondary-color;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.input {
+  color: $text-primary-color;
+  font-size: 3rem;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 70px;
+  overflow-x: auto;
+}
+
+.operation {
+  color: #ff5a1f;
+  margin-bottom: 6px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 6px 30px;
+}
+
+.button {
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: $text-primary-color;
+  font-weight: 600;
+  padding-bottom: 4px;
+  cursor: pointer;
+  user-select: none;
+
+  &Gray {
+    @extend .button;
+    background-color: #3b3d41;
+  }
+
+  &Orange {
+    @extend .button;
+    background-color: #ff5a1f;
+  }
+
+  &DarkGray {
+    @extend .button;
+    background-color: #1e1f21;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
